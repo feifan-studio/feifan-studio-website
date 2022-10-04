@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "feifan-studio-website",
+  "description": "Feifan Studio",
+  "version": "1.0.0",
+  "author": "Drew Wei",
+  "scripts": {
+    "clean": "rimraf .cache public",
+    "build": "npm run clean && gatsby build",
+    "develop": "npm run clean && gatsby develop -H 0.0.0.0 -p 8000",
+    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+    "start": "npm run clean && gatsby develop -H 0.0.0.0 -p 8000",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "@lekoarts/gatsby-theme-jodie": "^4.0.1",
+    "gatsby": "^4.24.1",
+    "gatsby-plugin-manifest": "^4.24.0",
+    "gatsby-plugin-sitemap": "^5.24.0",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feifan-studio/feifan-studio-website"
+  }
+}
